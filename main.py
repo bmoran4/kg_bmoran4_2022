@@ -9,15 +9,6 @@ def false():
 	print('false')
 	sys.exit(0)
 
-def check_string1(string):
-    characterCount = collections.defaultdict(int)
-
-    for character in string:
-        if character in characterCount.keys():
-            false()
-        else:
-            characterCount[character] = 1
-
 def check_length(str1, str2):
     if len(str1) > len(str2):
         false()
@@ -45,10 +36,10 @@ def main():
     string1   = sys.argv[1]
     string2   = sys.argv[2]
 
-    check_string1(string1)
     check_length(string1, string2)
     check_mapping(string1, string2)
 
+    #All tests passed
     print('true')
     
 # Main Execution
